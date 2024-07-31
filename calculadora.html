@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora Web</title>
     <link rel="stylesheet" href="calculadora.css">
+    <script type="text/javascript" src="calculadora.js"></script>
 </head>
 
 <body>
@@ -13,32 +14,34 @@
         <div>
             <h1>Calculadora Web</h1>
         </div>
-        <input type="text">
+        <input type="text" id="visor">
         <div>
             <div>
-                <button type="button">1/x</button>
-                <button type="button">n!</button>
-                <button type="button">*</button>
-                <button type="button">/</button>
+                <button type="button" id="button_1x">1/x</button>
+                <button type="button" id="button_n">n!</button>
+                <button type="button" id="button_multi" onclick="escrever('x')">*</button>
+                <button type="button" id="button_div" onclick="escrever('/')">/</button>
             </div>
             <div>
-                <button type="button">1</button>
-                <button type="button">2</button>
-                <button type="button">3</button>
-                <button type="button">+</button>
+                <button type="button" id="button" onclick="escrever(1)">1</button>
+                <button type="button" id="button" onclick="escrever(2)">2</button>
+                <button type="button" id="button" onclick="escrever(3)">3</button>
+                <button type="button" id="button_mais" onclick="escrever('+')">+</button>
             </div>
             <div>
-                <button type="button">4</button>
-                <button type="button">5</button>
-                <button type="button">6</button>
-                <button type="button">-</button>
+                <button type="button" id="button" onclick="escrever(4)">4</button>
+                <button type="button" id="button" onclick="escrever(5)">5</button>
+                <button type="button" id="button" onclick="escrever(6)">6</button>
+                <button type="button" id="button_menos" onclick="escrever('-')">-</button>
             </div>
             <div>
-                <button type="button">7</button>
-                <button type="button">8</button>
-                <button type="button">9</button>
-                <button type="button">0</button>
-                <button type="button">=</button>
+                <button type="button" id="button" onclick="escrever(7)">7</button>
+                <button type="button" id="button" onclick="escrever(8)">8</button>
+                <button type="button" id="button" onclick="escrever(9)">9</button>
+                <button type="button" id="button" onclick="escrever(0)">0</button>
+            </div>
+            <div>
+                <button type="button" id="button_igual" onclick="dividirPorUm()">=</button>
             </div>
 
         </div>
